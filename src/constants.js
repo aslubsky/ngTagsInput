@@ -2,6 +2,7 @@
 
 var KEYS = {
     backspace: 8,
+    semicolon: 59,
     tab: 9,
     enter: 13,
     escape: 27,

@@ -27,6 +27,7 @@
  *    the input element when the directive loses focus.
  * @param {string=} [removeTagSymbol=×] (Obsolete) Symbol character for the remove tag button.
  * @param {boolean=} [addOnEnter=true] Flag indicating that a new tag will be added on pressing the ENTER key.
+ * @param {boolean=} [addOnSemicolon=false] Flag indicating that a new tag will be added on pressing the ; key.
  * @param {boolean=} [addOnSpace=false] Flag indicating that a new tag will be added on pressing the SPACE key.
  * @param {boolean=} [addOnComma=true] Flag indicating that a new tag will be added on pressing the COMMA key.
  * @param {boolean=} [addOnBlur=true] Flag indicating that a new tag will be added when the input field loses focus.
@@ -189,6 +190,7 @@ tagsInput.directive('tagsInput', function($timeout, $document, $window, $q, tags
                 replaceSpacesWithDashes: [Boolean, true],
                 minLength: [Number, 3],
                 maxLength: [Number, MAX_SAFE_INTEGER],
+                addOnSemicolon: [Boolean, false],
                 addOnEnter: [Boolean, true],
                 addOnSpace: [Boolean, false],
                 addOnComma: [Boolean, true],
@@ -417,6 +419,7 @@ tagsInput.directive('tagsInput', function($timeout, $document, $window, $q, tags
                         return;
                     }
 
+                    addKeys[KEYS.semicolon] = options.addOnSemicolon;
                     addKeys[KEYS.enter] = options.addOnEnter;
                     addKeys[KEYS.comma] = options.addOnComma;
                     addKeys[KEYS.space] = options.addOnSpace;
