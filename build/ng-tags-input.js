@@ -5,14 +5,14 @@
  * Copyright (c) 2013-2017 Michael Benford
  * License: MIT
  *
- * Generated at 2017-03-28 23:42:37 +0300
+ * Generated at 2017-03-28 23:49:26 +0300
  */
 (function() {
 'use strict';
 
 var KEYS = {
     backspace: 8,
-    semicolon: 59,
+    semicolon: 186,
     tab: 9,
     enter: 13,
     escape: 27,
@@ -283,7 +283,7 @@ tagsInput.directive('tagsInput', ["$timeout", "$document", "$window", "$q", "tag
             };
         }],
         link: function(scope, element, attrs, ngModelCtrl) {
-            var hotkeys = [KEYS.enter, KEYS.comma, KEYS.space, KEYS.backspace, KEYS.delete, KEYS.left, KEYS.right],
+            var hotkeys = [KEYS.enter, KEYS.comma, KEYS.space, KEYS.backspace, KEYS.delete, KEYS.left, KEYS.right, KEYS.semicolon],
                 tagList = scope.tagList,
                 events = scope.events,
                 options = scope.options,
